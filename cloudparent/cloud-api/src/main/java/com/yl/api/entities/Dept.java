@@ -26,6 +26,9 @@ public class Dept implements Serializable {
     public static void main(String[] args) {
         Dept dept = new Dept();
         dept.setDeptNo(1L);
+        dept.setDeptName("");
+
+
     }
 
 }
