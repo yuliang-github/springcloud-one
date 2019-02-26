@@ -1,1 +1,14 @@
 # Created by .ignore support plugin (hsz.mobi)
+/cloudparent/eureka-server-7002/target/
+/.gitignore
+.DS_Store
+.idea/
+cloudparent/.DS_Store
+cloudparent/cloud-api/cloud-api.iml
+cloudparent/cloud-api/target/
+cloudparent/cloud-parent.iml
+cloudparent/dept-provider-8001/dept-provider-8001.iml
+cloudparent/dept-provider-8001/target/
+cloudparent/eureka-server-7001/eureka-server-7001.iml
+cloudparent/eureka-server-7001/target/
+cloudparent/eureka-server-7002/eureka-server-7002.iml
