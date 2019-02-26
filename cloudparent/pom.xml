@@ -10,6 +10,7 @@
     <modules>
         <module>cloud-api</module>
         <module>cloud-eureka-server-7001</module>
+        <module>dept-provider-8001</module>
     </modules>
     <packaging>pom</packaging>
 
