@@ -13,6 +13,7 @@
         <module>eureka-server-7001</module>
         <module>eureka-server-7002</module>
         <module>dept-provider-8002</module>
+        <module>dept-consumer-9001</module>
     </modules>
     <packaging>pom</packaging>
 
