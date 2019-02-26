@@ -1,0 +1,19 @@
+server:
+  port: 8002
+
+spring:
+  application:
+    name: dept-provider
+
+eureka:
+  instance:
+    instance-id: dept-provider-8002
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+info:
+  app.name: onion
+  app.version: 1.0.0
+  app.author: alex
+  app.since: 2019-02-26
