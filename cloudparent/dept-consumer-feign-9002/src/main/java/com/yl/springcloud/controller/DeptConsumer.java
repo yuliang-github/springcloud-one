@@ -1,7 +1,7 @@
 package com.yl.springcloud.controller;
 
+import com.yl.api.feign.DeptFeignApi;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -19,13 +19,16 @@ public class DeptConsumer {
     private RestTemplate restTemplate;
     @Autowired
     private LoadBalancerClient loadBalancerClient;
+    @Autowired
+    private DeptFeignApi deptFeignApi;
 
     public static final String service_prefix = "http://DEPT-PROVIDER";
 
     @GetMapping("/consumer/dept/get")
     public String get(@RequestParam("id") int id){
         //loadBalancerClient.choose("");
-        return restTemplate.getForObject(service_prefix + "/provider/dept/get?id="+id, String.class);
+        //return restTemplate.getForObject(service_prefix + "/provider/dept/get?id="+id, String.class);
+        return deptFeignApi.get(id);
     }
 
     /**

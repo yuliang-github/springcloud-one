@@ -1,0 +1,13 @@
+server:
+  port: 9002
+
+spring:
+  application:
+    name: dept-consumer-feign-9002
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+    # 此处被坑一次,此配置表示是否从EurekaServer拉取注册信息,记住只有注册中心才不要拉取注册信息
+    # fetch-registry: false
+    register-with-eureka: false
