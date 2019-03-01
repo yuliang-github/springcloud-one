@@ -16,6 +16,7 @@
         <module>dept-consumer-9001</module>
         <module>dept-consumer-feign-9002</module>
         <module>cloud-config-server-3344</module>
+        <module>cloud-config-client</module>
     </modules>
     <packaging>pom</packaging>
 

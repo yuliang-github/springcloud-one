@@ -1,4 +1,4 @@
-package com.yl.springcloud.config;
+package com.yl.springcloud;
 
 import com.yl.other.config.RibbonConfig;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;

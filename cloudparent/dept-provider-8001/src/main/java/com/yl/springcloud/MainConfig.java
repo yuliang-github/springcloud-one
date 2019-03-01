@@ -1,4 +1,4 @@
-package com.yl.springcloud.config;
+package com.yl.springcloud;
 
 import org.springframework.context.annotation.Configuration;
 

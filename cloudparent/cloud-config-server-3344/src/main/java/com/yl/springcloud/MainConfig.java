@@ -1,4 +1,4 @@
-package com.yl.springcloud.config;
+package com.yl.springcloud;
 
 import org.springframework.cloud.config.server.EnableConfigServer;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
