@@ -27,6 +27,8 @@ public class spring {
             }
         }));
 
+        Thread.currentThread().join();
+
         Thread.sleep(1000*60);
 
         System.exit(1);
