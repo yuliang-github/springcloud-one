@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.Future;
 
 /**
  * @author Alex
@@ -57,15 +58,17 @@ public class ThreadTest {
     }
 
     @Test
-    public void demo_1(){
+    public void demo_1() throws Exception{
         ExecutorService es = Executors.newFixedThreadPool(2);
 
-        es.submit(new Callable<Integer>() {
+        Future<Integer> future = es.submit(new Callable<Integer>() {
             @Override
             public Integer call() throws Exception {
                 return 1;
             }
         });
+
+        future.get();
 
     }
 

@@ -11,3 +11,7 @@ eureka:
     # 此处被坑一次,此配置表示是否从EurekaServer拉取注册信息,记住只有注册中心才不要拉取注册信息
     # fetch-registry: false
     register-with-eureka: false
+
+feign:
+  hystrix:
+    enabled: true

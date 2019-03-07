@@ -1,7 +1,10 @@
 package com.yl.other.config;
 
 import com.netflix.loadbalancer.IRule;
+import com.yl.api.feign.DeptFallbackFactory;
+import feign.hystrix.FallbackFactory;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 /**
@@ -16,6 +19,5 @@ public class RibbonConfig {
     public IRule myRule(){
         return new CustomerLoadRule();
     }
-
 
 }

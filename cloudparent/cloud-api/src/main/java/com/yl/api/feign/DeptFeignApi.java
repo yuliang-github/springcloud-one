@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Alex
  * @since 2019/2/27 20:55
  */
-@FeignClient(value = "DEPT-PROVIDER")
+
+/**
+ * 配置熔断策略
+ *  1.当调用的服务超时,或发生异常,则会进入熔断策略
+ */
+@FeignClient(value = "DEPT-PROVIDER",fallbackFactory = DeptFallbackFactory.class)
 public interface DeptFeignApi {
 
     @GetMapping("/provider/dept/get")

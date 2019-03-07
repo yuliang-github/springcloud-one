@@ -16,7 +16,13 @@ public class DeptProviderController {
     private String port;
 
     @GetMapping("/provider/dept/get")
-    public String get(@RequestParam("id") int id){
+    public String get(@RequestParam("id") int id) throws Exception{
+        if(id > 10){
+            throw new RuntimeException("发生错误了");
+        }
+        if(id > 3){
+            Thread.sleep(id*1000);
+        }
         return "port:"+port+"给你应答,你好:" + id;
     }
 
