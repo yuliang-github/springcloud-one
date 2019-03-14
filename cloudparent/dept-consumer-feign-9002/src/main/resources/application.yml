@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: dept-consumer-feign-9002
+
 eureka:
   client:
     service-url:
@@ -15,3 +16,27 @@ eureka:
 feign:
   hystrix:
     enabled: true
+
+# 配置hystrix的超时时间
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+# 配置Ribbon的超时时间
+#ribbon:
+#  ConnectTimeout: 2500
+#  ReadTimeout: 5000
+
+#ribbon:
+#  #配置首台服务器重试1次
+#  MaxAutoRetries: 1
+#  #配置其他服务器重试两次
+#  MaxAutoRetriesNextServer: 2
+#  #链接超时时间
+#  ConnectTimeout: 500
+#  #请求处理时间
+#  ReadTimeout: 2000
+#  #每个操作都开启重试机制
+#  OkToRetryOnAllOperations: true
+
+# 配置特定微服务的超时时间
+#DEPT-PROVIDER:
+#  ConnectTimeout: 2500
+#  ReadTimeout: 5000

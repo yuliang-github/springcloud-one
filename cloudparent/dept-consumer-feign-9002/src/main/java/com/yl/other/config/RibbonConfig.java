@@ -15,9 +15,9 @@ import org.springframework.context.annotation.Configuration;
 public class RibbonConfig {
 
 
-    @Bean
-    public IRule myRule(){
-        return new CustomerLoadRule();
-    }
+//    @Bean
+//    public IRule myRule(){
+//        return new CustomerLoadRule();
+//    }
 
 }
