@@ -1,5 +1,7 @@
 package com.yl.test;
 
+import org.junit.Test;
+
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -50,5 +52,18 @@ public class DateDemo {
             year -= 1;
         }
         return new int[] {year,month,day};
+    }
+
+    private static final ThreadLocal<DateFormat> LOCAL = new ThreadLocal<DateFormat>(){
+        @Override
+        protected DateFormat initialValue() {
+            return new SimpleDateFormat("yyyy-MM-dd");
+        }
+    };
+
+    @Test
+    public void test(){
+        DateFormat df = LOCAL.get();
+        System.err.println(df.format(new Date()));
     }
 }
