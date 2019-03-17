@@ -1,4 +1,4 @@
-package com.yl.psringcloud.config;
+package com.yl.springcloud.config;
 
 import com.netflix.client.config.IClientConfig;
 import com.netflix.loadbalancer.AbstractLoadBalancerRule;

@@ -18,7 +18,13 @@ feign:
     enabled: true
 
 # 配置hystrix的超时时间
-hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 20000
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
 # 配置Ribbon的超时时间
 #ribbon:
 #  ConnectTimeout: 2500

@@ -20,16 +20,17 @@ eureka:
 #    instance-id: cloud-zuul-gateway-9003
 #    prefer-ip-address: true
 
+zuul:
+  routes:
+    dept:
+      path: /dept/**
+      serviceId: DEPT-PROVIDER
+      # 敏感头设置,设置为空,可传递Cookie
+      sensitiveHeaders:
 
-#zuul:
-#  routes:
-#    dept:
-#      path: /dept/**
-#      serviceId: DEPT-PROVIDER
-#
-#
 #info:
 #  app.name: zuul
 #  app.version: 1.0.0
 #  app.author: alex
 #  app.since: 2019-03-15
+
