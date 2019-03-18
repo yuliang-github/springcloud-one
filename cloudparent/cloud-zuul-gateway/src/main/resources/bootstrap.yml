@@ -9,7 +9,9 @@ spring:
       discovery:
         enabled: true
         service-id: CONFIG-SERVER
-
+#    loadbalancer:
+#      retry:
+#        enabled: true
 
 eureka:
   client:
@@ -27,10 +29,21 @@ zuul:
       serviceId: DEPT-PROVIDER
       # 敏感头设置,设置为空,可传递Cookie
       sensitiveHeaders:
+#  retryable: true
+  SendErrorFilter:
+    post:
+      disable: true
 
-#info:
-#  app.name: zuul
-#  app.version: 1.0.0
-#  app.author: alex
-#  app.since: 2019-03-15
 
+hystrix:
+  command:
+    DEPT-PROVIDER:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 20000
+
+DEPT-PROVIDER:
+  ribbon:
+    ConnectTimeout: 2500
+    ReadTimeout: 5000
