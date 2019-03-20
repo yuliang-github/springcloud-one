@@ -82,6 +82,14 @@ public class ThreadTest {
                ret.set(100);
             }
         });
+        // 处理异常
+//        t.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
+//            @Override
+//            public void uncaughtException(Thread t, Throwable e) {
+//
+//            }
+//        });
+
 
         t.start();
         t.join();

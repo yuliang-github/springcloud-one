@@ -16,9 +16,9 @@ public class ExecutorDemo {
         es.submit(() -> System.err.println("正常的进来了"));
 
         es.shutdown();
-        es.submit(() -> {
-            System.err.println("shutdown之后进来了");
-        });
+        es.submit(() ->
+            System.err.println("shutdown之后进来了")
+        );
     }
 
 }
