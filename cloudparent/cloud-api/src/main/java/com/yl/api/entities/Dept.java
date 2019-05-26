@@ -3,8 +3,11 @@ package com.yl.api.entities;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.Accessors;
+import org.springframework.cloud.client.SpringCloudApplication;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author Alex
@@ -14,6 +17,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Data
 @Accessors(chain = true)
+@SpringCloudApplication
 public class Dept implements Serializable {
 
     private Long deptNo;
@@ -27,6 +31,11 @@ public class Dept implements Serializable {
         Dept dept = new Dept();
         dept.setDeptNo(1L);
         dept.setDeptName("");
+
+        List<Integer> list = new ArrayList<>();
+
+
+
     }
 
 }
